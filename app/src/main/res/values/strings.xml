@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TFApp</string>
+    <string name="titre">Welcome !</string>
+    <string name="salons">List of rooms</string>
+</resources>
