@@ -168,12 +168,12 @@
         "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_low_pressed.9.png",
-        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
-    },
-    {
         "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png",
         "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-xhdpi-v4/abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
