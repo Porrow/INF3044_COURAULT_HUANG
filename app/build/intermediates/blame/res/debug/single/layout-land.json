@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/layout-land/activity_room.xml",
+        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/layout-land/activity_room.xml"
+    },
+    {
+        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/layout-land/activity_login.xml",
+        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/layout-land/activity_login.xml"
+    },
+    {
+        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/layout-land/activity_choice.xml",
+        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/layout-land/activity_choice.xml"
+    }
+]

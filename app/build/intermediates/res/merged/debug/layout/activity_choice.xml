@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_choice"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#696969"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="net.porrow.tfchat.ChoiceActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/welcm"
+        android:text="@string/salons"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <Button
+        android:alpha="0"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/porte1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="180dp"
+        android:layout_marginLeft="40dp" />
+    <Button
+        android:alpha="0"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/porte2"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="180dp" />
+    <Button
+        android:alpha="0"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/porte3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="180dp"
+        android:layout_marginLeft="225dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/doors2"
+        android:layout_marginTop="63dp"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/welcm"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:background="@drawable/change"
+        android:id="@+id/imageButton2"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp" />
+
+</RelativeLayout>
