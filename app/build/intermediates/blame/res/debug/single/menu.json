@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/menu/choice_menu.xml",
+        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/menu/choice_menu.xml"
+    },
+    {
+        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/menu/room_menu.xml",
+        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/menu/room_menu.xml"
+    }
+]

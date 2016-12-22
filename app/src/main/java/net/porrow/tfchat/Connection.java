@@ -1,5 +1,6 @@
 package net.porrow.tfchat;
 
+import android.content.Intent;
 import android.util.Log;
 
 import java.io.BufferedInputStream;
@@ -9,23 +10,27 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 public class Connection extends Thread{
 
-    private static final String HOST = "192.168.43.128";
+    public static final String HOST = "porrow.ddns.net";
     private static final int PORT = 8525;
     private static final String[] FLAGS = {"SYN", "ROOM","ACK", "TXT", "FILE", "FIN"};
     private static final String S = "#";                                        //Caractère séparateur
+    private static final ArrayList<String> mesQ = new ArrayList<>();
 
-    private static boolean running = true;
+    public static boolean running = false;
+    public static String nUsers;
+    public static String name;
 
     private Socket soc;
-    private String name;
     private PrintWriter writer;
     private BufferedInputStream reader;
 
     public Connection(String name) {
         this.name = name;
+        running = true;
         try{
             soc = new Socket(HOST, PORT);
             Log.i("Connection", "Connection établie...");
@@ -34,6 +39,9 @@ public class Connection extends Thread{
         catch(IOException e) {
             Log.i("Connection", "Impossible de se connecter au serveur " + HOST + "/" + PORT + " : "+e.getMessage());
             running = false;
+            LoginActivity.startCo = false;
+            LoginActivity la = LoginActivity.logAct;
+            la.hand.sendMessage(la.hand.obtainMessage(1));
         }
     }
 
@@ -48,7 +56,6 @@ public class Connection extends Thread{
             while(running) {                                                    //Tant que la connexion est active, on traite les demandes
                 writer = new PrintWriter(soc.getOutputStream());
                 reader = new BufferedInputStream(soc.getInputStream());
-                //BufferedOutputStream writer2 = new BufferedOutputStream(soc.getOutputStream());
                 message = receive();                                            //On lit la demande du client
                 debug(message);                                                 //On affiche quelques informations
                 handling(message);                                              //On traite la requête
@@ -68,6 +75,12 @@ public class Connection extends Thread{
     private void handling(String[] mes) throws IOException {
         switch(mes[0]) {
             case "SYN":
+                LoginActivity la = LoginActivity.logAct;
+                nUsers = mes[1];
+                send(FLAGS[2]+S+" ");
+                la.hand.sendMessage(la.hand.obtainMessage(0));
+                Intent inte = new Intent(la, ChoiceActivity.class);
+                la.startActivity(inte);
                 break;
             case "ROOM":
                 break;
@@ -75,6 +88,16 @@ public class Connection extends Thread{
                 send(FLAGS[2]+S+" ");
                 break;
             case "TXT":
+                while(!RoomActivity.isInit){
+                    try{Thread.sleep(50);}catch(InterruptedException e){}
+                }
+                RoomActivity ra = RoomActivity.instance;
+                if(mes[1].length() > 2)
+                    RoomActivity.messages.add(mes[1]);
+                else
+                    RoomActivity.messages.add("### "+RoomActivity.instance.getString(R.string.thereare)+mes[1]+RoomActivity.instance.getString(R.string.users)+" ###");
+                ra.hand.sendMessage(ra.hand.obtainMessage(0));
+                send(FLAGS[2]+S+" ");
                 break;
             case "FILE":
                 break;
@@ -93,18 +116,26 @@ public class Connection extends Thread{
         debug = "    Thread : " + Thread.currentThread().getName() + ".";
         debug += "Demande de l'adresse : " + remote.getAddress().getHostAddress() + ".";
         debug += " Sur le port : " + remote.getPort() + ".";
-        debug += "-> Commande reçue : " + mes[0] + " " + mes[1];
-        if(!mes[0].equals(FLAGS[2]) && mes[1].length() > 1)
+        debug += "-> Commande reçue : " + mes[0] + "#" + mes[1];
+        if(!mes[0].equals(FLAGS[2]) || !mes[1].equals(" "))
             Log.i("Connection", debug);
     }
 
     //Envoie un message à l'utilisateur
     private void send(String mes) {
-        if(mes == null) mes = FLAGS[2];
+        //Log.i("Connection", mes);
+        if(!mesQ.isEmpty() && mes.equals(FLAGS[2]+S+" ")) {
+            synchronized (mesQ) {mes = mesQ.remove(0);}
+            if(mes.split(S)[0].equals(FLAGS[5]))
+                running = false;
+        }
         writer.write(mes);														//On envoie la réponse au client
         writer.flush();
     }
 
+    public static void sendQ(String mes) {
+        synchronized(mesQ){mesQ.add(mes);}
+    }
 
     //Lit la réponse reçue par l'utilisateur
     private String[] receive() throws IOException {

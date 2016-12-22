@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">TFApp</string>
     <string name="titre">Welcome !</string>
-    <string name="salons">List of rooms</string>
+    <string name="salons">Lobbies</string>
+    <string name="connec">Connection</string>
+    <string name="dec">Disconnection</string>
+    <string name="cgu">UELA</string>
+    <string name="send">Send</string>
+    <string name="thereare">"There are "</string>
+    <string name="users">" users connected"</string>
+    <string name="co">Connecting…</string>
+    <string name="una">Unable to connect</string>
+    <string name="deco">Disconnecting…</string>
+    <string name="username">Please enter your login</string>
+    <string name="coco">Connecting…</string>
+    <string name="comi">Coming soon</string>
+    <string name="dialog">This fonctionnality is currently in development.</string>
 </resources>

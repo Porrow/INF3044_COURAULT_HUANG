@@ -22,7 +22,6 @@ public class MainService extends IntentService {
 	protected void onHandleIntent(Intent intent) {
 		if (intent != null) {
 			String name = intent.getStringExtra(PNAME);
-
 			Connection c = new Connection(name);
 			c.start();
 		}

@@ -168,6 +168,10 @@
         "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/notification_template_icon_group.xml"
     },
     {
+        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/layout/rv_display_element.xml",
+        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/layout/rv_display_element.xml"
+    },
+    {
         "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
         "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/layout/abc_activity_chooser_view.xml"
     }

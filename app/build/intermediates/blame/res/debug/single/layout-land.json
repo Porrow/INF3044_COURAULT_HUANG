@@ -8,6 +8,10 @@
         "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/layout-land/activity_login.xml"
     },
     {
+        "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/layout-land/rv_display_element.xml",
+        "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/layout-land/rv_display_element.xml"
+    },
+    {
         "merged": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/build/intermediates/res/merged/debug/layout-land/activity_choice.xml",
         "source": "/home/florian/Documents/Dropbox/ESIEA/3A/Android/TFchat/app/src/main/res/layout-land/activity_choice.xml"
     }

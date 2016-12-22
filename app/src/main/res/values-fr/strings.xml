@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TFApp</string>
+    <string name="titre">Bienvenue !</string>
+    <string name="salons">Salons</string>
+    <string name="connec">Connexion</string>
+    <string name="dec">Déconnexion</string>
+    <string name="cgu">CGU</string>
+    <string name="send">Envoyer</string>
+    <string name="thereare">"Il y a "</string>
+    <string name="users">" utilisateurs connectés"</string>
+    <string name="co">Connexion en cours…</string>
+    <string name="una">"Impossible de se connecter à "</string>
+    <string name="deco">Déconnexion…</string>
+    <string name="username">"Veuillez entrer votre pseudo"</string>
+    <string name="coco">"Connexion en cours…"</string>
+    <string name="comi">Arrive prochaînement</string>
+    <string name="dialog">Cette fonctionnalité est encore en développement.</string>
+</resources>

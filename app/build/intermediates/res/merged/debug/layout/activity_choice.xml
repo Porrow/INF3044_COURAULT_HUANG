@@ -57,13 +57,4 @@
         android:layout_below="@+id/welcm"
         android:layout_centerHorizontal="true" />
 
-    <ImageButton
-        android:layout_width="50dip"
-        android:layout_height="50dip"
-        android:background="@drawable/change"
-        android:id="@+id/imageButton2"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp" />
-
 </RelativeLayout>
